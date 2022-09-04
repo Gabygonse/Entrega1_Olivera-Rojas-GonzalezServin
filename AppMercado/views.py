@@ -9,10 +9,12 @@ def inicio(request):
     return render(request, "AppMercado/inicio.html")
 
 
+
 def electrodomesticos(request):
 
     #return HttpResponse(texto)
     return render(request, "AppMercado/electrodomesticos.html")
+
 
 def electrodomesticosFormulario(request):
     if request.method=="POST":
@@ -28,9 +30,12 @@ def electrodomesticosFormulario(request):
             electrodomestico.save()
             return render(request, "AppMercado/publicacionExitosa.html")
 
+
     else:
         formulario=ElectroForm()
         return render(request, "AppMercado/electrodomesticosFormulario.html", {"formulario":formulario})
+
+
 
 def muebles(request):
 
@@ -54,6 +59,8 @@ def mueblesFormulario(request):
     else:
         formulario=MueblesForm()
         return render(request, "AppMercado/mueblesFormulario.html", {"formulario":formulario})
+
+
 
 def vehiculos(request):
 
@@ -81,5 +88,7 @@ def vehiculosFormulario(request):
 def publicacionExitosa(request):
 
     return render(request, "AppMercado/publicacionExitosa.html")
+
+    
 
 
