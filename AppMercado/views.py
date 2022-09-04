@@ -89,6 +89,6 @@ def publicacionExitosa(request):
 
     return render(request, "AppMercado/publicacionExitosa.html")
 
-    
+
 
 
