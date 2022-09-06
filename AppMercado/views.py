@@ -92,3 +92,28 @@ def publicacionExitosa(request):
 
 
 
+def busquedaElectrodomesticos(request):
+    return render(request, "AppMercado/busquedaElectrodomesticos.html")
+
+def buscar(request):
+    electrodomesticos=request.GET["electrodomesticos"]
+    respuesta=f"Estoy publicando el electodomestico"
+    return HttpResponse(respuesta)
+
+
+def busquedaMuebles(request):
+    return render(request, "AppMercado/busquedaMuebles.html")
+
+def buscar(request):
+    muebles=request.GET["muebles"]
+    respuesta=f"Estoy publicando el mueble"
+    return HttpResponse(respuesta)
+
+
+def busquedaVehiculos(request):
+    return render(request, "AppMercado/busquedaVehiculos.html")
+
+def buscar(request):
+    vehiculo=request.GET["vehiculo"]
+    respuesta=f"Estoy publicando el vehiculo"
+    return HttpResponse(respuesta)
